@@ -14,15 +14,15 @@ Olist was founded on February 2015 with the mission to empower small and medium-
 Although the timeframe of the orders starts from September 2016, the data for 2016 only contains 3 months: September, October, and December. September & December only contain 1-5 orders, while November is completely missing. Hence, the 2016 data can't be reliably used for trend analysis, as the data effectively starts in January 2017 for meaningful insights. 
 
 ### Data Model
-![[assets/data_model.png]]
+![Data Model](assets/data_model.png)
 
 The final data model in Power BI is shown above. The main fact table is the `fact_order_items` table, while the `fact_orders`, which is a "factless" fact table, serves a bridge table that connects the records in the `fact_order_items` table to the other dimension tables. 
 
 Two summary tables were also created: `dim_seller_segments`, which groups sellers by the average review scores for their products, and `dim_customer_segments`, which groups customers by their order count.
 
 
-### Query Structure
-![[assets/queries_structure.png]]
+### Queries Structure
+![Queries Structure](assets/queries_structure.png)
 
 The query structure (shown above) is divided into three groups:
 1. Raw group: 
