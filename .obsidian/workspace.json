@@ -11,10 +11,14 @@
             "id": "acc333c6a7f07a25",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "README"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -150,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20260401022643.png",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Pasted image 20260401022643"
+              "title": "Outline of README"
             }
           }
         ]
@@ -177,15 +183,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "f99955bc66548456",
+  "active": "acc333c6a7f07a25",
   "lastOpenFiles": [
+    "Pasted image 20260401022643.png",
     "assets/data_model.png",
     "assets/queries_structure.png",
     "assets",
     "New folder",
     "ecommerce_analysis.pbix",
     "data_model.png",
-    "Pasted image 20260401022643.png",
     "queries_structure.png",
     "Pasted image 20260331201236.png",
     "Pasted image 20260331201309.png",
