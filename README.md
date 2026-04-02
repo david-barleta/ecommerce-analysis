@@ -37,7 +37,7 @@ The query structure (shown above) is divided into three groups:
 	- data aggregation
 3. Model group:  The tables were categorized into either a fact table or a dimension table, and the column names were renamed to more readable, business-friendly names.
 
-### Data Lineage
+### Data Lineage (snippet)
 ![Data Lineage Snippet](assets/data_lineage_diagram_snippet.png)
 
 ## Insights Deep Dive
