@@ -3,7 +3,7 @@
 ## Executive Summary
 This project analyzes over 96K delivered orders transacted through Olist's Brazilian e-commerce platform between January 2017 and August 2018, covering 13.2M in GMV across 3,095 sellers and 93,104 unique customers. The analysis showed that GMV grew nearly 8x through 2017 driven entirely by order volume, with no meaningful AOV growth, while the platform demonstrated strong operational performance. However, three risks stand out: customer retention is significantly low, logistics reliability had not yet been fully stabilized, and revenue is heavily concentrated. Together, these findings point to a platform that successfully achieved early scale but faces an important strategic decision: whether to pursue geographic expansion, double down on seller and customer retention, or invest in logistics partnerships needed to sustain its growth.
 
-![Executive Overview](executive_overview_page.png)
+![Executive Overview](assets/executive_overview_page.png)
 
 
 ## Project Background
