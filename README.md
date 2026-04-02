@@ -5,14 +5,12 @@ This project analyzes over 96K delivered orders transacted through Olist's Brazi
 
 ![Executive Overview](assets/executive_overview_page.png)
 
-
 ## Project Background
 Olist was founded in February 2015 with the mission to empower small and medium-sized businesses in Brazil by providing a unified platform for selling their products online. Operating as a B2C marketplace, Olist connects professional sellers to customers through a single storefront rather than requiring each seller to build and manage their own. Olist's primary revenue streams are seller subscription fees and transaction-based commissions. Sellers pay a monthly fee to access the platform, and Olist takes a percentage cut of each completed transaction. Hence, one of the key metrics for evaluating Olist's scale and growth is Gross Merchandise Value (GMV), which represents the total value of goods transacted through the platform.
 
 This project analyzes the Olist Brazilian E-Commerce Public Dataset, sourced from Kaggle, covering the period from 2016 to 2018. The goal is surface actionable business insights four key areas: revenue and growth trends, operational and logistics performance, product and category analysis, and customer and seller behavior. The analysis is presented through an interactive Power BI dashboard and is intended to demonstrate the application of business intelligence/analytics to real-world e-commerce business operations.
 
 ## Data Structure & Initial Checks
-
 The dataset consists of eight CSV files covering orders, order items, payments, reviews, products, customers, sellers, and geolocation. Primary key uniqueness was verified across all tables using Power Query's Keep Duplicates function. Most tables returned clean results, with expected duplicates in order items (multiple items per order) and order payments (multiple payment methods per order). One exception was `order_reviews`, where duplicate `review_id` values were found, which suggests that either accidental double recording or a single review being associated with multiple orders. Additionally, 775 orders in `orders` had no corresponding records in `order_items`, which likely represents cancelled or unprocessed orders that never had items recorded against them.
 
 `NULL` and out-of-range values were also checked across all tables. Most NULL values in `orders` were concentrated in date columns like `order_delivered_carrier_date` and `order_delivered_customer_date`, and their distribution across order statuses confirmed that they were expected rather than data errors. In products, 610 records had a `NULL` `product_category_name`, which were replaced with "`Uncategorized`" to ensure consistent grouping in analysis. Review comment fields in order_reviews contained a large number of empty strings, which were standardized to NULL before any transformations were applied. No impossible values were found, such as negative prices or delivery dates earlier than order dates, confirming the dataset is reliable for analysis.
@@ -38,6 +36,9 @@ The query structure (shown above) is divided into three groups:
 	- data integration
 	- data aggregation
 3. Model group:  The tables were categorized into either a fact table or a dimension table, and the column names were renamed to more readable, business-friendly names.
+
+### Data Lineage
+![Data Lineage Snippet](assets/data_lineage_diagram_snippet.png)
 
 ## Insights Deep Dive
 ### Executive Overview
