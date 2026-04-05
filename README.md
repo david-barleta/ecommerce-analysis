@@ -37,8 +37,8 @@ The query structure (shown above) is divided into three groups:
 	- data aggregation
 3. Model group:  The tables were categorized into either a fact table or a dimension table, and the column names were renamed to more readable, business-friendly names.
 
-### Data Lineage (snippet)
-![Data Lineage Snippet](assets/data_lineage_diagram_snippet.png)
+### Data Flow
+![Data Flow Diagram](assets/data_flow_diagram.png)
 
 ## Insights Deep Dive
 ### Executive Overview
@@ -134,3 +134,11 @@ Multiple assumptions were made throughout the analysis to manage challenges with
 - **No marketing or acquisition data:** Other important KPIs in e-commerce, like CAC and CLV, cannot be computed as the dataset contains no information on marketing spend or customer acquisition channels.
 - **Incomplete 2018 data:** The dataset ends in August 2018, which means that Q4 2018 is not captured at all. Given that November 2017 was the strongest month in the entire dataset due to Black Friday, the absence of Q4 2018 most likely means that the total GMV for 2018 is understated relative to what the full year would show.
 - **Dataset doesn't represent Olist's full early operating history:** Based on publicly available information, Olist launched in February 2015. The dataset only covers September 2016 onwards, which means that approximately 18 months of early operating history is not reflected in this analysis.
+
+# Future Work
+- **Deeper customer retention analysis:** Apply RFM (recency, frequency, and monetary value) analysis to allow for more customer segmentation beyond the one-time vs. returning buyer classification used in this project. While frequency and monetary components are available in this dataset, recency is constrained by the dataset's end date.
+- **Seller churn analysis:** Identify sellers who were active early in the dataset period but became inactive over time to surface early warning signals for seller attrition. Given that the top 100 sellers account for nearly 45% of total GMV, understanding which seller characteristics predict churn would be an extension of the seller concentration analysis in this project.
+- **Additional metrics:** Metrics such as cancellation rate and average order processing time would add meaningful operational depth. Some of these could be incorporated in a future version of this project considering that the necessary data, such as order status and timestamps, is already available in the dataset.
+- **Query performance optimization:** DAX measures in this model were written for correctness and clarify rather than performance. For a larger dataset or a production environment, some measures could be optimized using pre-aggregated calculated columns or alternative DAX patterns to reduce query execution time.
+- **Data modeling improvements:** The current data model classifies `dim_order_payments` and `dim_order_reviews` as dimension tables for modeling convenience. In a stricter star schema design, these tables may not exactly be treated as pure dimension tables.
+- **Geolocation analysis:** The dataset includes latitude and longitude coordinates at the ZIP code level for both customers and sellers. A map-based analysis of delivery performance, GMV concentration, and underserved regions would allow for more insights.
