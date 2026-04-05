@@ -129,13 +129,13 @@ Multiple assumptions were made throughout the analysis to manage challenges with
 - **Analysis period:** All insights and figures are based on 2017 to 2018 data only. The 2016 data (September to December) was excluded due to its incompleteness, with only 267 delivered orders across the three months and November entirely missing. 
 - **Delivered orders only:** Most of the insights are based on measures which are filtered to delivered orders only.
 
-# Limitations
+## Limitations
 - **No cost or profitability data:** The dataset provided by Olist doesn't include the platform's commission rates, operational costs, or seller subscription fees. Hence, profitability, margins, and actual revenue can't be determined from the analysis done.
 - **No marketing or acquisition data:** Other important KPIs in e-commerce, like CAC and CLV, cannot be computed as the dataset contains no information on marketing spend or customer acquisition channels.
 - **Incomplete 2018 data:** The dataset ends in August 2018, which means that Q4 2018 is not captured at all. Given that November 2017 was the strongest month in the entire dataset due to Black Friday, the absence of Q4 2018 most likely means that the total GMV for 2018 is understated relative to what the full year would show.
 - **Dataset doesn't represent Olist's full early operating history:** Based on publicly available information, Olist launched in February 2015. The dataset only covers September 2016 onwards, which means that approximately 18 months of early operating history is not reflected in this analysis.
 
-# Future Work
+## Future Work
 - **Deeper customer retention analysis:** Apply RFM (recency, frequency, and monetary value) analysis to allow for more customer segmentation beyond the one-time vs. returning buyer classification used in this project. While frequency and monetary components are available in this dataset, recency is constrained by the dataset's end date.
 - **Seller churn analysis:** Identify sellers who were active early in the dataset period but became inactive over time to surface early warning signals for seller attrition. Given that the top 100 sellers account for nearly 45% of total GMV, understanding which seller characteristics predict churn would be an extension of the seller concentration analysis in this project.
 - **Additional metrics:** Metrics such as cancellation rate and average order processing time would add meaningful operational depth. Some of these could be incorporated in a future version of this project considering that the necessary data, such as order status and timestamps, is already available in the dataset.
